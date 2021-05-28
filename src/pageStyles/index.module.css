@@ -1,0 +1,25 @@
+.heroSection {
+  background: rgba(48, 71, 94, 0.8);
+  backdrop-filter: blur(var(--pageGlassBlur));
+  z-index: 0;
+  min-height: calc(100vh - var(--headerSize));
+  background-repeat: no-repeat;
+  width: 100vw;
+  box-shadow: inset 5px 5px 50px rgba(48, 71, 94, 0.8);
+  position: relative;
+  /* border-top-left-radius: 30px;
+  border-top-right-radius: 30px; */
+}
+
+.contentContainer {
+  width: var(--containerWidth);
+  max-width: var(--containerMaxWidth);
+  /* background-color: yellow; */
+  /* margin: 0 auto; */
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+.heroSectionTitle {
+  color: var(--tertiaryColor);
+}

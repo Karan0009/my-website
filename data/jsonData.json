@@ -1,0 +1,16 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "name": "karan singh",
+      "age": 21,
+      "languages": ["english", "hindi", "punjabi"]
+    },
+    {
+      "id": 0,
+      "name": "raj",
+      "age": 17,
+      "languages": ["english", "hindi", "french(barely)"]
+    }
+  ]
+}

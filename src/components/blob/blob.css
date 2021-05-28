@@ -1,0 +1,11 @@
+.blobWrapper {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  height: 100px;
+  width: 100px;
+  z-index: -9;
+  background: linear-gradient(45deg, red, purple);
+  transition: 300ms ease-in-out all;
+  border-radius: 50%;
+}

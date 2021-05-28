@@ -9,3 +9,12 @@
   transition: 300ms ease-in-out all;
   border-radius: 50%;
 }
+
+.blob {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  font-size: 30rem;
+}

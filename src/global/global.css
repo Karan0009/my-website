@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: var(--tertiaryColor);
+  background-color: var(--secondaryColor);
 }
 
 .cursor-wrapper {
@@ -139,7 +139,9 @@ body {
 }
 
 :root {
-  --pageGlassBlur: 20px;
+  --cardRotateAngle: 5deg;
+  --cardRotateAngleNeg: -5deg;
+  --pageGlassBlur: 10px;
   --primaryColor: #222831;
   --secondaryColor: #30475e;
   --tertiaryColor: #ececec;

@@ -11,6 +11,10 @@ import {
   contentContainer,
   tOver,
   heroSectionWrapper,
+  subTitle1,
+  subTitle2,
+  blobStyle2,
+  mainSection,
 } from "../pageStyles/index.module.css";
 const offsetX = 25;
 const offsetY = 25;
@@ -43,8 +47,8 @@ const Home = ({ data }) => {
       </Helmet>
       <div
         style={{
-          left: 0,
-          right: 0,
+          left: "4.5%",
+          top: "1%",
           height: `${offsetY * 2}px`,
           width: `${offsetX * 2}px`,
         }}
@@ -52,36 +56,39 @@ const Home = ({ data }) => {
         className="cursor2"
       ></div>
       <Header />
-      <div className={heroSectionWrapper}>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
-        <span className={tOver}></span>
+      <div className={mainSection}>
+        <div className={heroSectionWrapper}>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
+          <span className={tOver}></span>
 
-        <div className={heroSection}>
-          <div className={contentContainer}>
-            <h1 className={heroSectionTitle}>
-              Hi,
-              <br />I <br />
-              am
-              <br /> Karandeep Singh
-            </h1>
-          </div>
-          {/* <div
+          <div className={heroSection}>
+            <div className={contentContainer}>
+              <h1 className={heroSectionTitle}>
+                Hi,
+                <br />I am Karan Singh
+              </h1>
+              <p className={subTitle1}>Developer</p>
+              <p className={subTitle2}>I try to make things work</p>
+            </div>
+            {/* <div
         style={{ left: 0, right: 0 }}
         ref={cursorRef}
         className="cursor-wrapper"
       >
         <div className="cursor"></div>
       </div> */}
+          </div>
         </div>
+        <Blob />
+        <Blob blobStyles={blobStyle2} />
       </div>
-      <Blob />
     </>
   );
 };

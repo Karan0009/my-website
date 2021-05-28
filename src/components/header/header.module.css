@@ -8,7 +8,7 @@
 }
 
 .headerContainer {
-  background: var(--secondaryColor);
+  background: var(--primaryColor);
   display: flex;
   align-items: center;
   height: var(--headerSize);
@@ -44,7 +44,7 @@
   position: absolute;
   width: 100%;
   height: 50%;
-  background: var(--accentColor);
+  background: var(--secondaryColor);
   left: 0;
   bottom: 5%;
   z-index: -1;

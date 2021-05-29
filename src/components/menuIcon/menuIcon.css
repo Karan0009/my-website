@@ -1,0 +1,60 @@
+.menuItemWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* background: yellow; */
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--tertiaryColor);
+  transition: var(--transtionDuration) ease-in-out all;
+  position: relative;
+  animation-timing-function: ease-in-out;
+  animation-duration: var(--transtionDuration);
+}
+
+.line::before,
+.line::after {
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.line::before {
+  top: -350%;
+  /* transform: translateY(5px) rotate(45deg); */
+}
+
+.line::after {
+  top: 350%;
+  /* transform: translateY(-8px) rotate(-45deg); */
+}
+
+/* .line:nth-of-type(1) {
+  width: 50%;
+  margin:3% 37%;
+  transform: rotateZ(-20deg) translate(-10px, 1px);
+} */
+
+.menuOpen .line {
+  animation-name: rotate180;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

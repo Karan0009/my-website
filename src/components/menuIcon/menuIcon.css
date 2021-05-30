@@ -16,7 +16,7 @@
   transition: var(--transtionDuration) ease-in-out all;
   position: relative;
   animation-timing-function: ease-in-out;
-  animation-duration: var(--transtionDuration);
+  animation-duration: 500ms;
 }
 
 .line::before,
@@ -27,16 +27,18 @@
   content: "";
   position: absolute;
   left: 0;
+  animation-timing-function: ease-in-out;
+  animation-duration: 500ms;
 }
 
 .line::before {
-  top: -350%;
-  /* transform: translateY(5px) rotate(45deg); */
+  top: 350%;
+  background-color: var(--secondaryColor);
 }
 
 .line::after {
-  top: 350%;
-  /* transform: translateY(-8px) rotate(-45deg); */
+  top: -350%;
+  background-color: yellow;
 }
 
 /* .line:nth-of-type(1) {
@@ -50,11 +52,87 @@
   animation-fill-mode: forwards;
 }
 
+.menuOpen .line::before {
+  animation-name: morphToArrowBefore;
+  animation-fill-mode: forwards;
+}
+.menuOpen .line::after {
+  animation-name: morphToArrowAfter;
+  animation-fill-mode: forwards;
+}
+
+.menuClose .line {
+  animation-name: rotate180To0;
+  animation-fill-mode: forwards;
+}
+
+.menuClose .line::before {
+  animation-name: morphArrowToHamBefore;
+  animation-fill-mode: forwards;
+}
+.menuClose .line::after {
+  animation-name: morphArrowToHamAfter;
+  animation-fill-mode: forwards;
+}
+
 @keyframes rotate180 {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate180To0 {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes morphToArrowBefore {
+  0% {
+    width: 100%;
+    transform: unset;
+  }
+  100% {
+    width: 50%;
+    transform: translateY(-1px) translateX(16px) rotate(-45deg);
+  }
+}
+
+@keyframes morphToArrowAfter {
+  0% {
+    width: 100%;
+    transform: unset;
+  }
+  100% {
+    width: 50%;
+    transform: translateY(1px) translateX(16px) rotate(45deg);
+  }
+}
+
+@keyframes morphArrowToHamBefore {
+  0% {
+    width: 50%;
+    transform: translateY(-1px) translateX(16px) rotate(-45deg);
+  }
+  100% {
+    width: 100%;
+    transform: unset;
+  }
+}
+
+@keyframes morphArrowToHamAfter {
+  0% {
+    width: 50%;
+    transform: translateY(1px) translateX(16px) rotate(45deg);
+  }
+  100% {
+    width: 100%;
+    transform: unset;
   }
 }

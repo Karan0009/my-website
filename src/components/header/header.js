@@ -38,10 +38,16 @@ const Header = () => {
         {/* {isMenuOpen && ( */}
         <div
           className="mobile-nav-container"
-          style={{ left: isMenuOpen ? "0%" : "100%" }}
+          style={{ opacity: isMenuOpen ? 1 : 0 }}
         >
           <ul className="mobile-nav-list">
-            <li className="mobile-nav-item" data-order={0}>
+            <li
+              className="mobile-nav-item"
+              style={{
+                "--order": 1,
+                transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
+              }}
+            >
               <Link
                 to="/"
                 activeClassName="mobile-active-item"
@@ -50,7 +56,14 @@ const Header = () => {
                 Home
               </Link>
             </li>
-            <li className="mobile-nav-item" data-order={1}>
+            <li
+              className="mobile-nav-item"
+              style={{
+                "--order": 2,
+                transform: isMenuOpen ? "translateX(0)" : "translateX(50vw)",
+                opacity: isMenuOpen ? 1 : 0,
+              }}
+            >
               <Link
                 to="/projects"
                 activeClassName="mobile-active-item"
@@ -59,7 +72,13 @@ const Header = () => {
                 Projects
               </Link>
             </li>
-            <li className="mobile-nav-item" data-order={2}>
+            <li
+              className="mobile-nav-item"
+              style={{
+                "--order": 3,
+                transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
+              }}
+            >
               <Link
                 to="/blog"
                 activeClassName="mobile-active-item"
@@ -68,7 +87,13 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-            <li className="mobile-nav-item" data-order={3}>
+            <li
+              className="mobile-nav-item"
+              style={{
+                "--order": 4,
+                transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
+              }}
+            >
               <Link
                 to="/contact"
                 activeClassName="mobile-active-item"

@@ -82,7 +82,7 @@
   backdrop-filter: blur(var(--pageGlassBlur));
   overflow: hidden;
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -101,9 +101,9 @@
 
 .mobile-nav-item {
   margin: 10px 0;
-  transition: 200ms ease all;
-  /* transition-delay: attr("data-order");
-  transform: translateX(40px); */
+  transition: 200ms ease-in-out all;
+  transition-delay: calc(var(--order) * 50ms);
+  transform: translateX(100vw);
 }
 
 .mobile-nav-item-link {
@@ -125,6 +125,10 @@
 @media screen and (max-width: 478px) {
   .menuIcon {
     display: block;
+  }
+
+  .mobile-nav-container {
+    display: flex !important;
   }
 
   .navlist {

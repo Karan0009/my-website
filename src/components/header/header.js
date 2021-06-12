@@ -44,7 +44,7 @@ const Header = () => {
             <li
               className="mobile-nav-item"
               style={{
-                "--order": 1,
+                "--order": isMenuOpen ? 1 : 4,
                 transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
               }}
             >
@@ -59,7 +59,7 @@ const Header = () => {
             <li
               className="mobile-nav-item"
               style={{
-                "--order": 2,
+                "--order": isMenuOpen ? 2 : 3,
                 transform: isMenuOpen ? "translateX(0)" : "translateX(50vw)",
                 opacity: isMenuOpen ? 1 : 0,
               }}
@@ -75,7 +75,7 @@ const Header = () => {
             <li
               className="mobile-nav-item"
               style={{
-                "--order": 3,
+                "--order": isMenuOpen ? 3 : 2,
                 transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
               }}
             >
@@ -90,7 +90,7 @@ const Header = () => {
             <li
               className="mobile-nav-item"
               style={{
-                "--order": 4,
+                "--order": isMenuOpen ? 4 : 1,
                 transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
               }}
             >

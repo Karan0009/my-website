@@ -1,23 +1,40 @@
-backend:
-  name: git-gateway
-  branch: version2 # Branch to update (optional; defaults to master)
+# backend:
+#   name: test-repo
+#   # branch: version2 # Branch to update (optional; defaults to master)
 
-media_folder: static/img
-public_folder: /img
+# media_folder: static/img
+# public_folder: /img
+
+# collections:
+#   - name: "blog"
+#     label: "Blog"
+#     folder: "content/blog"
+#     create: true
+#     slug: "index"
+#     media_folder: ""
+#     public_folder: ""
+#     path: "{{title}}/index"
+#     editor:
+#       preview: true
+#     fields:
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Publish Date", name: "date", widget: "datetime" }
+#       - { label: "Description", name: "description", widget: "string" }
+#       - { label: "Body", name: "body", widget: "markdown" }
+
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: assets
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: blog
+    label: Blog
+    folder: blog
     create: true
-    slug: "index"
-    media_folder: ""
-    public_folder: ""
-    path: "{{title}}/index"
-    editor:
-      preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }

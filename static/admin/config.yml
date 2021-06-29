@@ -25,7 +25,7 @@
 backend:
   name: github
   repo: Karan0009/my-website
-  branch: master
+  branch: version2
 
 media_folder: static/assets
 public_folder: assets
@@ -33,7 +33,7 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/blog
     create: true
     fields:
       - { name: path, label: Path }

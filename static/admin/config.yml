@@ -23,7 +23,9 @@
 #       - { label: "Body", name: "body", widget: "markdown" }
 
 backend:
-  name: test-repo
+  name: github
+  repo: Karan0009/my-website
+  branch: master
 
 media_folder: static/assets
 public_folder: assets

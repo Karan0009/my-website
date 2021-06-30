@@ -106,6 +106,25 @@ body {
   animation: animatingGradient 7s ease infinite;
 }
 
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+
+.blog-card {
+  display: flex;
+  border: 1px solid var(--tertiaryColor);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.blog-card-title {
+  color: var(--tertiaryColor);
+  font-size: var(--titlefontSize);
+}
+
 @-webkit-keyframes animatingGradient {
   0% {
     background-position: 0% 50%;
@@ -154,4 +173,5 @@ body {
   --containerWidth: 90%;
   --containerMaxWidth: 1440px;
   --transtionDuration: 200ms;
+  --titlefontSize: 1.2rem;
 }

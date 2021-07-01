@@ -5,6 +5,13 @@ import MenuIcon from "../menuIcon/menuIcon";
 
 import "./header.css";
 
+const menuItems = [
+  { name: "home", path: "/" },
+  { name: "projects", path: "/projects" },
+  { name: "blog", path: "/blogs" },
+  { name: "contact", path: "/contact" },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,104 +48,40 @@ const Header = () => {
           style={{ opacity: isMenuOpen ? 1 : 0 }}
         >
           <ul className="mobile-nav-list">
-            <li
-              className="mobile-nav-item"
-              style={{
-                "--order": isMenuOpen ? 1 : 4,
-                transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
-              }}
-            >
-              <Link
-                to="/"
-                activeClassName="mobile-active-item"
-                className="mobile-nav-item-link"
+            {menuItems.map((item, index) => (
+              <li
+                key={`menu-item-${index}`}
+                className="mobile-nav-item"
+                style={{
+                  "--order": isMenuOpen ? 1 : 4,
+                  transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
+                }}
               >
-                Home
-              </Link>
-            </li>
-            <li
-              className="mobile-nav-item"
-              style={{
-                "--order": isMenuOpen ? 2 : 3,
-                transform: isMenuOpen ? "translateX(0)" : "translateX(50vw)",
-                opacity: isMenuOpen ? 1 : 0,
-              }}
-            >
-              <Link
-                to="/projects"
-                activeClassName="mobile-active-item"
-                className="mobile-nav-item-link"
-              >
-                Projects
-              </Link>
-            </li>
-            <li
-              className="mobile-nav-item"
-              style={{
-                "--order": isMenuOpen ? 3 : 2,
-                transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
-              }}
-            >
-              <Link
-                to="/blog"
-                activeClassName="mobile-active-item"
-                className="mobile-nav-item-link"
-              >
-                Blog
-              </Link>
-            </li>
-            <li
-              className="mobile-nav-item"
-              style={{
-                "--order": isMenuOpen ? 4 : 1,
-                transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
-              }}
-            >
-              <Link
-                to="/contact"
-                activeClassName="mobile-active-item"
-                className="mobile-nav-item-link"
-              >
-                Contact
-              </Link>
-            </li>
+                <Link
+                  to={item.path}
+                  activeClassName="mobile-active-item"
+                  className="mobile-nav-item-link"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         {/* )} */}
         {/* desktop nav */}
         <ul className="navlist">
-          <li className="navItem">
-            <Link to="/" activeClassName="activeItem" className="navItemLink">
-              Home
-            </Link>
-          </li>
-          <li className="navItem">
-            <Link
-              to="/projects"
-              activeClassName="activeItem"
-              className="navItemLink"
-            >
-              Projects
-            </Link>
-          </li>
-          <li className="navItem">
-            <Link
-              to="/blog"
-              activeClassName="activeItem"
-              className="navItemLink"
-            >
-              Blog
-            </Link>
-          </li>
-          <li className="navItem">
-            <Link
-              to="/contact"
-              activeClassName="activeItem"
-              className="navItemLink"
-            >
-              Contact
-            </Link>
-          </li>
+          {menuItems.map((item, index) => (
+            <li key={`menu-item-desktop-${index}`} className="navItem">
+              <Link
+                to={item.path}
+                activeClassName="activeItem"
+                className="navItemLink"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

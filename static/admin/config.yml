@@ -40,3 +40,10 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - {
+          name: featuredImage,
+          label: Thumbnail,
+          widge: image,
+          choose_url: true,
+          default: "../assets/default__ohlala.jpg",
+        }

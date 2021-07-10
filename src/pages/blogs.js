@@ -7,40 +7,40 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const BlogPage = ({ data }) => {
-  const { allMarkdownRemark } = useStaticQuery(
-    graphql`
-      query blogsQuery {
-        allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
-          edges {
-            node {
-              html
-              wordCount {
-                words
-              }
-              frontmatter {
-                date(fromNow: true)
-                path
-                title
-              }
-            }
-          }
-        }
-      }
-    `
-  );
+  // const { allMarkdownRemark } = useStaticQuery(
+  //   graphql`
+  //     query blogsQuery {
+  //       allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+  //         edges {
+  //           node {
+  //             html
+  //             wordCount {
+  //               words
+  //             }
+  //             frontmatter {
+  //               date(fromNow: true)
+  //               path
+  //               title
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
   //   console.log(allMarkdownRemark.edges[0].node.frontmatter);
   return (
     <>
       <Layout>
         {/* <Seo title="blogs" /> */}
         <section className="blogs-grid">
-          {allMarkdownRemark.edges.map((d) => (
+          {/* {allMarkdownRemark.edges.map((d) => (
             <article className="blog-card">
               <header className="blog-card-title">
                 {d.node.frontmatter.title}
               </header>
             </article>
-          ))}
+          ))} */}
         </section>
 
         {/* <p style={{ color: "white" }}>{site.siteMetadata.title}</p> */}

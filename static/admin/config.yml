@@ -30,20 +30,50 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+# collections:
+#   - name: blog
+#     label: Blog
+#     folder: content/blog
+#     create: true
+#     fields:
+#       - { name: path, label: Path }
+#       - { name: date, label: Date, widget: datetime }
+#       - { name: title, label: Title }
+#       - { name: body, label: Body, widget: markdown }
+#       - {
+#           name: featuredImage,
+#           label: Thumbnail,
+#           widge: image,
+#           choose_url: true,
+#           default: "../assets/default__ohlala.jpg",
+#         }
+
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: "blog"
+    label: "Blogs"
+    folder: "content/blog"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: publishedDate,
+          label: "Published date",
+          widget: datetime,
+          required: true,
+        }
+      - {
+          name: updatedDate,
+          label: "Update date",
+          widget: datetime,
+          required: true,
+        }
+      - { name: isActive, label: isActive, required: true, widget: boolean }
+      - { name: title, label: Title, required: true, widget: string }
+      - { name: slug, label: Slug, widget: string, required: true }
       - {
           name: featuredImage,
           label: Thumbnail,
           widge: image,
           choose_url: true,
-          default: "../assets/default__ohlala.jpg",
+          default: "/assets/default__ohlala.jpg",
         }
+      - { name: body, label: Body, widget: markdown, required: true }

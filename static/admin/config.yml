@@ -54,6 +54,9 @@ collections:
     folder: "content/blog"
     create: true
     fields:
+      - { name: title, label: Title, required: true, widget: string }
+      - { name: isActive, label: isActive, required: true, widget: boolean }
+      - { name: slug, label: Slug, widget: string, required: true }
       - {
           name: publishedDate,
           label: "Published date",
@@ -66,9 +69,6 @@ collections:
           widget: datetime,
           required: true,
         }
-      - { name: isActive, label: isActive, required: true, widget: boolean }
-      - { name: title, label: Title, required: true, widget: string }
-      - { name: slug, label: Slug, widget: string, required: true }
       - {
           name: featuredImage,
           label: Thumbnail,
@@ -77,3 +77,27 @@ collections:
           default: "/assets/default__ohlala.jpg",
         }
       - { name: body, label: Body, widget: markdown, required: true }
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    fields:
+      - { name: "title", label: "Title", required: true, widget: string }
+      - { name: "isActive", label: "isActive", required: true, widget: boolean }
+      - { name: slug, label: Slug, widget: string, required: true }
+      - {
+          name: startDate,
+          label: "Start date",
+          widget: datetime,
+          required: true,
+        }
+      - { name: endDate, label: "End date", widget: datetime, required: true }
+      - {
+          name: featuredImage,
+          label: Thumbnail,
+          widge: image,
+          choose_url: true,
+          default: "/assets/default__ohlala.jpg",
+        }
+      - { name: "codeUrl", label: "Code url", required: false, widget: string }
+      - { name: "demoUrl", label: "Demo url", required: false, widget: string }

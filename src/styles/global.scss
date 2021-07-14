@@ -1,8 +1,25 @@
+$color5: #051828;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--color2);
+  background: var(--color1);
+}
+
+::selection {
+  color: var(--color2);
+  background: var(--color1);
 }
 
 .logoText {
@@ -11,8 +28,28 @@
 }
 
 body {
-  background-color: var(--primaryColor);
-  font-family: Source Sans Pro, sans-serif;
+  background-color: var(--color5);
+  font-family: Poppins, sans-serif;
+  color: var(--color2);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  /* max-width: var(--containerMaxWidth); */
+  background: darken($color: $color5, $amount: 2);
+
+  z-index: -2;
+}
+
+.background__overlay {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(80px);
 }
 
 .cursor-wrapper {
@@ -176,15 +213,20 @@ body {
   --cardRotateAngle: 5deg;
   --cardRotateAngleNeg: -5deg;
   --pageGlassBlur: 10px;
-  --primaryColor: #000;
-  --secondaryColor: #ff0000;
-  --tertiaryColor: #ececec;
+  --color1: #ef476f;
+  --color2: #ffffff;
+  --color3: #ffd166;
+  --color4: #000000;
+  --color5: #051828;
   --mutedText1: rgba(236, 236, 236, 0.6);
   --mutedText2: rgba(236, 236, 236, 0.3);
-  --accentColor: #f2a365;
   --headerSize: 10vh;
   --containerWidth: 90%;
   --containerMaxWidth: 1440px;
   --transtionDuration: 200ms;
-  --titlefontSize: 1.5rem;
+  --menuFontSize: 1.6rem;
+  --semiLargeFontSize: 2.4rem;
+  --largeFontSize: 7.2rem;
+  --mediumFontSize: 2.2rem;
+  --smallFontSize: 1.2rem;
 }

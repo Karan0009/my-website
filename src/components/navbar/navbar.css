@@ -1,0 +1,123 @@
+.nav__list {
+  list-style: none;
+  display: flex;
+  position: relative;
+  /* border: 1px solid white; */
+}
+
+/* .nav__list::before {
+  content: "";
+  background: var(--color2);
+  position: absolute;
+  height: 1px;
+  width: 60px;
+  top: 50%;
+  left: 100%;
+  z-index: 0;
+} */
+
+.nav__listItem {
+  margin: 0 60px;
+  position: relative;
+  padding: 5px;
+  /* background: rgba(117, 96, 99, 0.3); */
+}
+
+/* lines between nav items---start*/
+
+.nav__listItem::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  background: var(--color2);
+  opacity: 0.1;
+  left: 100%;
+  top: 50%;
+  z-index: -1;
+}
+
+.nav__listItem .nav__activeItemLink::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: var(--color2);
+
+  left: 100%;
+  top: 50%;
+  z-index: 0;
+  transition: 200ms linear all;
+}
+.nav__listItem:last-of-type .nav__activeItemLink::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background: var(--color2);
+
+  left: -84%;
+  top: 50%;
+  z-index: 0;
+  transition: 200ms linear all;
+}
+
+.nav__listItem:last-of-type::before {
+  display: none;
+}
+
+.nav__listItem:first-of-type {
+  margin-left: 0;
+}
+
+.nav__listItem:last-of-type {
+  margin-right: 0;
+}
+
+.nav__itemLink {
+  color: var(--color2);
+  opacity: 0.3;
+  font-size: var(--menuFontSize);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.nav__activeItemLink {
+  opacity: 1;
+}
+
+@media screen and (max-width: 999px) {
+  .nav__listItem {
+    margin: 0 40px;
+  }
+  .nav__listItem::before {
+    width: 80px;
+  }
+  .nav__listItem .nav__activeItemLink::after {
+    width: 40px;
+  }
+  .nav__listItem:last-of-type .nav__activeItemLink::after {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 814px) {
+  .nav__listItem {
+    margin: 0 20px;
+  }
+  .nav__listItem::before {
+    width: 40px;
+  }
+  .nav__listItem .nav__activeItemLink::after {
+    width: 10px;
+  }
+  .nav__listItem:last-of-type .nav__activeItemLink::after {
+    width: 10px;
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .nav__list {
+    display: none;
+  }
+}

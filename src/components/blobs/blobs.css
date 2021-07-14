@@ -1,0 +1,45 @@
+.blobsContainer {
+  position: absolute;
+  width: 100vw;
+  max-width: var(--containerMaxWidth);
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+  opacity: 0.08;
+}
+
+.blob {
+  position: absolute;
+}
+
+.blob__1 {
+  top: -10rem;
+  right: 0;
+  width: 600px;
+  height: 600px;
+}
+
+.blob__2 {
+  top: -10rem;
+  left: 0;
+  width: 400px;
+  height: 400px;
+}
+
+.blob__3 {
+  top: 40rem;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translateX(-50%);
+}
+
+.blob__4 {
+  top: 100rem;
+  left: 0%;
+  width: 600px;
+  height: 600px;
+}

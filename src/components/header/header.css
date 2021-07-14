@@ -1,19 +1,19 @@
+.headerContainer {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  height: var(--headerSize);
+  max-width: var(--containerMaxWidth);
+  /* box-shadow: inset 0px 20px 50px var(--primaryColor); */
+}
+
 .mainHeader {
   display: flex;
   align-items: center;
   width: var(--containerWidth);
-  max-width: var(--containerMaxWidth);
   margin: 0 auto;
   flex-wrap: nowrap;
-  /* border: 2px solid white; */
-}
-
-.headerContainer {
-  /* background: var(--primaryColor); */
-  display: flex;
-  align-items: center;
-  height: var(--headerSize);
-  /* box-shadow: inset 0px 20px 50px var(--primaryColor); */
+  /* border: 1px solid yellow; */
 }
 
 .messageMe {
@@ -23,6 +23,7 @@
   margin-left: auto;
   align-items: center;
   flex-wrap: nowrap;
+  text-decoration: none;
   cursor: pointer;
 }
 

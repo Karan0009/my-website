@@ -68,7 +68,7 @@ const Header = () => {
         </div>
         {/* )} */}
         <Navbar />
-        <div className="messageMe">
+        <Link to="/contact" className="messageMe">
           <svg
             className="messageMe__icon"
             width="25"
@@ -93,7 +93,7 @@ const Header = () => {
             />
           </svg>
           <p className="messageMe__text">message me</p>
-        </div>
+        </Link>
       </div>
     </div>
     // <div className="headerContainer">

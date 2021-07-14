@@ -1,4 +1,5 @@
 $color5: #051828;
+$color3: #ffd166;
 
 * {
   margin: 0;
@@ -38,18 +39,30 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
+  width: 100%;
   height: 100%;
   /* max-width: var(--containerMaxWidth); */
   background: darken($color: $color5, $amount: 2);
-
+  overflow: hidden;
   z-index: -2;
+  // border: 1px solid white;
 }
 
 .background__overlay {
   height: 100%;
   width: 100%;
   backdrop-filter: blur(80px);
+}
+
+.highlight--red {
+  color: var(--color1);
+}
+.highlight--yellow {
+  color: var(--color3);
+}
+
+.highlight--green {
+  color: #2ae600;
 }
 
 .cursor-wrapper {
@@ -225,7 +238,7 @@ body {
   --containerMaxWidth: 1440px;
   --transtionDuration: 200ms;
   --menuFontSize: 1.6rem;
-  --semiLargeFontSize: 2.4rem;
+  --semiLargeFontSize: 2.7rem;
   --largeFontSize: 7.2rem;
   --mediumFontSize: 2.2rem;
   --smallFontSize: 1.2rem;

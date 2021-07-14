@@ -29,13 +29,13 @@ html {
 }
 
 body {
-  background-color: var(--color5);
+  background-color: var(--color3);
   font-family: Poppins, sans-serif;
   color: var(--color2);
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -241,5 +241,6 @@ body {
   --semiLargeFontSize: 2.7rem;
   --largeFontSize: 7.2rem;
   --mediumFontSize: 2.2rem;
+  --semiMediumFontSize: 1.6rem;
   --smallFontSize: 1.2rem;
 }

@@ -6,7 +6,7 @@ const menuItems = [
   { name: "about", path: "/" },
   { name: "projects", path: "/projects" },
   { name: "blog", path: "/blog" },
-  { name: "contact", path: "/contact" },
+  // { name: "contact", path: "/contact" },
 ];
 
 const Navbar = () => {

@@ -5,8 +5,8 @@ import "./aboutMe.scss";
 
 const AboutMeSection = () => {
   return (
-    <section className="aboutMeSection" id="aboutMeSection">
-      <main className="aboutMe__container">
+    <section className="container aboutMeSection" id="aboutMeSection">
+      <main className="container__inner aboutMe__container">
         <h1 className="aboutMe__title">i am KARAN</h1>
         <div className="aboutMe__body">
           <p>

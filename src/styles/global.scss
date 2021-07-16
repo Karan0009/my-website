@@ -54,6 +54,15 @@ body {
   backdrop-filter: blur(80px);
 }
 
+.container {
+  max-width: var(--containerMaxWidth);
+}
+
+.container__inner {
+  width: var(--containerWidth);
+  margin: 0 auto;
+}
+
 .highlight--red {
   color: var(--color1);
 }

@@ -5,12 +5,12 @@ const PostCard = () => {
   return (
     <div className="postCard">
       <div className="postCard__imgContainer">
-        <img className="postCard__img" src="https://placekitten.com/300/300" />
+        <img className="postCard__img" src="https://placekitten.com/200/200" />
       </div>
       <div className="postCard__body">
         <h4 className="postCard__title">Game developemnt, I guess??</h4>
         <div className="postCard__details">
-          <p className="postCard__category">Game development</p>
+          <p className="postCard__category">GameDev</p>
           <p className="postCard__date">Sept 9, 2021</p>
         </div>
       </div>

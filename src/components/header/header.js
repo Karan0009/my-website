@@ -33,8 +33,8 @@ const Header = () => {
     }
   };
   return (
-    <div className="headerContainer">
-      <div className="mainHeader">
+    <div className="container headerContainer">
+      <div className="container__inner mainHeader">
         <MenuIcon
           menuIconContainerClass={"menuIcon"}
           setMenuOpenStatus={setMenuOpenStatus}

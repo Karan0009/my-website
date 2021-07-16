@@ -1,0 +1,19 @@
+.postCardsGrid {
+  display: grid;
+  // grid-template-rows: auto;
+  grid-auto-rows: auto;
+  // grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  // grid-template-columns: repeat(3, 2fr);
+  // justify-content: space-between;
+  // justify-items: flex-start;
+  // display: flex;
+  // justify-content: space-between;
+  // width: 100%;
+  // margin-top: 100px;
+  // flex-wrap: wrap;
+}
+
+// .postCardsGrid > div {
+//   border: 1px solid white;
+//   height: 500px;
+// }

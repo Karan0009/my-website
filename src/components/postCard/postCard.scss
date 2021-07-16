@@ -3,8 +3,16 @@
   overflow: hidden;
   position: relative;
   height: 330px;
+  max-height: 330px;
+  max-width: 280px;
   width: 280px;
+  margin: 50px 0;
 }
+
+// .postCard:nth-of-type(3n) {
+//   justify-self: end;
+//   // width: 20px;
+// }
 
 .postCard__imgContainer {
   position: absolute;
@@ -23,25 +31,41 @@
 }
 
 .postCard__body {
-  background: #ffffff80;
-  backdrop-filter: blur(30px);
+  background: rgba(#ffffff, 0.6);
+  backdrop-filter: blur(8px);
   width: 90%;
   left: 50%;
-  bottom: 20px;
-  border-radius: 2.4rem;
+  bottom: 15px;
+  border-radius: 2.2rem;
   transform: translateX(-50%);
   height: auto;
-  padding: 1rem;
+  padding: 1.2rem 1.8rem;
   position: absolute;
-  font-size: var(--smallFontSize);
-  //   font-family: Poppins;
-  font-weight: 300;
+  //   font-size: var(--smallFontSize);
+  font-size: 2rem;
+  font-family: Poppins;
+  font-weight: 500;
+  max-height: 200px;
+  color: var(--color4);
 }
 
 .postCard__title {
   color: var(--color4);
+  font-weight: 500;
 }
 
 .postCard__details {
+  font-size: var(--smallFontSize);
+  margin-top: 10px;
+  justify-content: space-between;
+  font-weight: 400;
   display: flex;
+}
+
+.postCard__category {
+  color: lighten(#000, 20);
+}
+
+.postCard__date {
+  color: lighten(#000, 30);
 }

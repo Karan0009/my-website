@@ -1,4 +1,5 @@
 import React from "react";
+import Background from "../background/background";
 import PostCard from "../postCard/postCard";
 import "./postCardsGrid.scss";
 
@@ -7,7 +8,7 @@ const PostCardsGrid = () => {
     <div className="container">
       <div className="container__inner">
         <div className="postCardsGrid">
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
             <PostCard />
             <PostCard />
             <PostCard />
@@ -16,13 +17,13 @@ const PostCardsGrid = () => {
             <PostCard />
             <PostCard />
             <PostCard />
-          </div>
-          {/* <PostCard />
+          </div> */}
           <PostCard />
           <PostCard />
           <PostCard />
           <PostCard />
-          <PostCard /> */}
+          <PostCard />
+          <PostCard />
         </div>
       </div>
     </div>

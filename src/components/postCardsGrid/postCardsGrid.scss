@@ -1,7 +1,13 @@
 .postCardsGrid {
   display: grid;
   // grid-template-rows: auto;
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  position: relative;
+  // align-self: stretch;
+  // grid-auto-rows: auto;
   // grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   // grid-template-columns: repeat(3, 2fr);
   // justify-content: space-between;
@@ -9,7 +15,7 @@
   // display: flex;
   // justify-content: space-between;
   // width: 100%;
-  // margin-top: 100px;
+  // margin: 100px auto;
   // flex-wrap: wrap;
 }
 

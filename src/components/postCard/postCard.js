@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import "./postCard.scss";
 
@@ -5,7 +6,12 @@ const PostCard = () => {
   return (
     <div className="postCard">
       <div className="postCard__imgContainer">
-        <img className="postCard__img" src="https://placekitten.com/200/200" />
+        <StaticImage
+          className="postCard__img"
+          src="https://placekitten.com/200/200"
+          alt="a kitten"
+        />
+        {/* <img className="postCard__img" src="https://placekitten.com/200/200" /> */}
       </div>
       <div className="postCard__body">
         <h4 className="postCard__title">Game developemnt, I guess??</h4>

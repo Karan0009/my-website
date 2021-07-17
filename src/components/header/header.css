@@ -5,6 +5,8 @@
   height: var(--headerSize);
   /* max-width: var(--containerMaxWidth); */
   /* box-shadow: inset 0px 20px 50px var(--primaryColor); */
+  /* position: fixed;
+  width: 100%; */
 }
 
 .mainHeader {

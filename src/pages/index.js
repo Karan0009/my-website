@@ -7,12 +7,15 @@ import Seo from "../components/seo";
 import Blobs from "../components/blobs/blobs";
 import AboutMeSection from "../components/aboutMe/aboutMe";
 import PostCardsGrid from "../components/postCardsGrid/postCardsGrid";
+import SectionLayout from "../components/sectionLayout/sectionLayout";
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <AboutMeSection />
-    <PostCardsGrid />
+    <SectionLayout hasPostCards title="Blog" />
+    <SectionLayout hasPostCards title="Projects" />
+    {/* <PostCardsGrid /> */}
   </Layout>
 );
 

@@ -39,7 +39,6 @@ const Layout = ({ children }) => {
         }}
       >
         <main>
-          {" "}
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
           {children}
         </main>

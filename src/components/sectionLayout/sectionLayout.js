@@ -1,4 +1,5 @@
 import React from "react";
+import CustomButton from "../button/customButton";
 import PostCardsGrid from "../postCardsGrid/postCardsGrid";
 
 import "./sectionLayout.scss";
@@ -11,8 +12,13 @@ const SectionLayout = (props) => {
         {props?.title ? props.title : "this is new section"}
       </h3>
       <main className="sectionContainer__content">
-        {hasPostCards && <PostCardsGrid />}
+        {hasPostCards && (
+          <>
+            <PostCardsGrid />
+          </>
+        )}
       </main>
+      <CustomButton buttonText="See more work" />
     </section>
   );
 };

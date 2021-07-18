@@ -5,10 +5,10 @@ import "./postCardsGrid.scss";
 
 const PostCardsGrid = () => {
   return (
-    <div className="container">
-      <div className="container__inner">
-        <div className="postCardsGrid">
-          {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
+    // <div className="container">
+    //   <div className="container__inner">
+    <div className="postCardsGrid">
+      {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
             <PostCard />
             <PostCard />
             <PostCard />
@@ -18,15 +18,21 @@ const PostCardsGrid = () => {
             <PostCard />
             <PostCard />
           </div> */}
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-          <PostCard />
-        </div>
-      </div>
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
     </div>
+    //   </div>
+    // </div>
   );
 };
 

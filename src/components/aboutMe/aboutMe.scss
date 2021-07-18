@@ -2,21 +2,23 @@
   //   border: 1px solid white;
   // max-width: var(--containerMaxWidth);\
   margin-top: var(--headerSize);
+  animation: fadeIn 500ms ease-in forwards;
   // margin-top: 40px;
 }
 
-.aboutMe__container {
-  //   width: var(--containerWidth);
-  //   margin: 0 auto;
-  //   width: var(--containerWidth);
-  //   border: 1px solid yellow;
-  // width: var(--containerWidth);
-  // margin: 0 auto;
-}
+// .aboutMe__container {
+//   width: var(--containerWidth);
+//   margin: 0 auto;
+//   width: var(--containerWidth);
+//   border: 1px solid yellow;
+// width: var(--containerWidth);
+// margin: 0 auto;
+// }
 
 .aboutMe__title {
   font-size: var(--largeFontSize);
   color: var(--color2);
+  font-weight: 200;
 }
 
 .aboutMe__body {

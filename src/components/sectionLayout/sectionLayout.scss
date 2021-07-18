@@ -15,6 +15,9 @@
   font-size: var(--almostLargeFontSize);
   font-weight: 500;
   color: var(--color2);
+  letter-spacing: 1.3rem;
+  // border-bottom: 1px solid #fff;
+  // text-decoration: underline;
   //   background: yellow;
   font-family: Poppins, sans-serif;
   top: 20px;
@@ -24,9 +27,17 @@
 }
 
 .sectionContainer__content {
-  background: rgba(#ffffff, 0.09);
-  border: 3px solid rgba(#ffffff, 0.08);
-  backdrop-filter: blur(20px);
+  // background: rgba(#ffffff, 0.07);
+  // border: 3px solid rgba(#ffffff, 0.05);
+  // background-clip: border-box;
+  // background-image: linear-gradient(
+  //   43deg,
+  //   #4158d030 0%,
+  //   #c850c030 46%,
+  //   #ffcc7030 100%
+  // );
+
+  // backdrop-filter: blur(20px);
   //   filter: blur(20px);
   border-radius: 2.4rem;
   width: 100%;

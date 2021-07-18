@@ -8,7 +8,8 @@ const PostCard = () => {
       <div className="postCard__imgContainer">
         <StaticImage
           className="postCard__img"
-          src="https://placekitten.com/200/200"
+          src="https://picsum.photos/400/400"
+          quality="100"
           alt="a kitten"
         />
         {/* <img className="postCard__img" src="https://placekitten.com/200/200" /> */}

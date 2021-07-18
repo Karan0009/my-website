@@ -7,7 +7,9 @@ const AboutMeSection = () => {
   return (
     <section className="container aboutMeSection" id="aboutMeSection">
       <main className="container__inner aboutMe__container">
-        <h1 className="aboutMe__title">i am KARAN</h1>
+        <h1 className="aboutMe__title">
+          i am <span style={{ fontWeight: "bold" }}>KARAN</span>
+        </h1>
         <div className="aboutMe__body">
           <p>
             I try to make things <span className="highlight--red">work</span>

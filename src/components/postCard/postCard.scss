@@ -15,14 +15,14 @@
   // border: 1px solid white;
 }
 
-.postCard:first-of-type,
-.postCard:nth-of-type(4n) {
-  justify-self: start;
-}
+// .postCard:first-of-type,
+// .postCard:nth-of-type(4n) {
+//   justify-self: start;
+// }
 
-.postCard:nth-of-type(3n) {
-  justify-self: end;
-}
+// .postCard:nth-of-type(3n) {
+//   justify-self: end;
+// }
 
 // .postCard:first-of-type {
 //   justify-self: start;
@@ -92,20 +92,20 @@
   color: lighten(#000, 30);
 }
 
-@media screen and (max-width: 1155px) {
-  .postCard:first-of-type {
-    justify-self: start;
-  }
+// @media screen and (max-width: 1155px) {
+//   .postCard:first-of-type {
+//     justify-self: start;
+//   }
 
-  .postCard:nth-of-type(2n) {
-    justify-self: end;
-  }
+//   .postCard:nth-of-type(2n) {
+//     justify-self: end;
+//   }
 
-  .postCard:nth-of-type(4n) {
-    justify-self: end;
-  }
+//   .postCard:nth-of-type(4n) {
+//     justify-self: end;
+//   }
 
-  .postCard:nth-of-type(3n) {
-    justify-self: start;
-  }
-}
+//   .postCard:nth-of-type(3n) {
+//     justify-self: start;
+//   }
+// }

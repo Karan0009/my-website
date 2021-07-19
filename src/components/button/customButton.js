@@ -10,7 +10,7 @@ const CustomButton = (props) => {
     fontFamily: "Poppins",
     fontSize: "1rem",
     color: "var(--color5)",
-    marginRight: "auto",
+    // marginRight: "100%",
   };
   return (
     <button

@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../logo/logo";
 import MenuIcon from "../menuIcon/menuIcon";
 import Navbar from "../navbar/navbar";
 
-import "./header.css";
+import "./header.scss";
 
 const menuItems = [
   { name: "home", path: "/" },
@@ -15,6 +15,39 @@ const menuItems = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showHeaderBackground, setShowHeaderBackground] = useState(false);
+
+  useEffect(() => {
+    let ticking = false;
+    window.addEventListener("scroll", scrollHandler);
+    // const lastScrollTopVal = window.pageYOffset;
+    // window.addEventListener("scroll", scrollHandler);
+
+    // (e) => {
+    // if (!ticking) {
+    //   window.requestAnimationFrame(() => {
+    //     console.log(`x:${e.clientX},y:${e.clientY}`);
+    //     ticking = false;
+    //   });
+    //   ticking = true;
+    // }
+    //   console.log(window.scrollY);
+    // }
+    function scrollHandler(e) {
+      console.log(window.scrollY > 100);
+      if (window.scrollY > 100) {
+        setShowHeaderBackground(true);
+        console.log("show header background");
+      } else {
+        console.log("don't show header background");
+        setShowHeaderBackground(false);
+      }
+    }
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   const setMenuOpenStatus = (value) => {
     setIsMenuOpen(value);
@@ -33,7 +66,12 @@ const Header = () => {
     }
   };
   return (
-    <div className="container headerContainer">
+    <div
+      className="container headerContainer"
+      style={{
+        backgroundColor: showHeaderBackground ? "#05182890" : "#ffffff00",
+      }}
+    >
       <div className="container__inner mainHeader">
         <MenuIcon
           menuIconContainerClass={"menuIcon"}

@@ -5,10 +5,10 @@ const CustomButton = (props) => {
   const defaultStyles = {
     border: 0,
     background: "var(--color2)",
-    padding: "1.1rem 1.3rem",
+    padding: "2rem 2.2rem",
     borderRadius: "1rem",
     fontFamily: "Poppins",
-    fontSize: "1rem",
+    fontSize: "var(--smallFontSize)",
     color: "var(--color5)",
     // marginRight: "100%",
   };

@@ -1,12 +1,19 @@
 .headerContainer {
   /* border: 1px solid white; */
+
   display: flex;
   align-items: center;
   height: var(--headerSize);
   /* max-width: var(--containerMaxWidth); */
   /* box-shadow: inset 0px 20px 50px var(--primaryColor); */
-  /* position: fixed;
-  width: 100%; */
+  position: fixed;
+  backdrop-filter: blur(8px);
+  // background-color: rgba(255, 255, 255, 0.);
+
+  z-index: 3;
+  width: 100%;
+  top: 0;
+  transition: 200ms linear all;
 }
 
 .mainHeader {

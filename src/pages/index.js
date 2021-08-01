@@ -13,8 +13,8 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <AboutMeSection />
-    <SectionLayout hasPostCards title="Blog" />
-    <SectionLayout hasPostCards title="Projects" />
+    <SectionLayout hasPostCards title="Blog" id="blog__section" />
+    <SectionLayout hasPostCards title="Projects" id="projects__section" />
     {/* <PostCardsGrid /> */}
   </Layout>
 );

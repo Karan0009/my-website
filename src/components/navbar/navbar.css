@@ -55,7 +55,7 @@
   width: 60px;
   height: 1px;
   background: var(--color2);
-  left: -84%;
+  left: -133%;
   top: 50%;
   z-index: 0;
   transition: 200ms linear all;
@@ -97,7 +97,7 @@
   }
   .nav__listItem:last-of-type .nav__activeItemLink::after {
     width: 40px;
-    left: -54%;
+    left: -80%;
   }
 }
 

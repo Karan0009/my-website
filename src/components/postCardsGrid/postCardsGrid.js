@@ -24,12 +24,6 @@ const PostCardsGrid = () => {
       <PostCard />
       <PostCard />
       <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
-      <PostCard />
     </div>
     //   </div>
     // </div>

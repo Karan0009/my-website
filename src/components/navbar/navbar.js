@@ -1,20 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import "./navbar.css";
 
+// const menuItems = [
+//   { name: "about", path: "#aboutMe__section" },
+//   { name: "blog", path: "#blog__section" },
+//   { name: "projects", path: "#projects__section" },
+//   // { name: "contact", path: "/contact" },
+// ];
 const menuItems = [
   { name: "about", path: "/" },
-  { name: "projects", path: "/projects" },
-  { name: "blog", path: "/blog" },
+  { name: "blog", path: "/#blog__section" },
+  { name: "projects", path: "#projects__section" },
   // { name: "contact", path: "/contact" },
 ];
 
-const Navbar = () => {
-  // const move
+const Navbar = (props) => {
+  // useEffect(() => {
+  //   console.log(props.location.hash);
+  // }, [props.location.hash]);
+  // const addOrRemoveActiveClass = (e) => {
+  //   e.stopPropagation();
+  //   // console.log(e.target);
+  //   // console.log(props.location.hash);
+  // };
   return (
     <ul className="nav__list">
       {menuItems.map((item, index) => (
-        <li key={`navItem-${index}`} className="nav__listItem">
+        <li
+          key={`navItem-${index}`}
+          // onClick={addOrRemoveActiveClass}
+          className="nav__listItem"
+        >
           <Link
             activeClassName="nav__activeItemLink"
             className="nav__itemLink"

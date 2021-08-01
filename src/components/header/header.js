@@ -3,17 +3,21 @@ import React, { useState, useEffect } from "react";
 import Logo from "../logo/logo";
 import MenuIcon from "../menuIcon/menuIcon";
 import Navbar from "../navbar/navbar";
+import { Location } from "@reach/router";
 
 import "./header.scss";
 
 const menuItems = [
-  { name: "home", path: "/" },
-  { name: "projects", path: "/projects" },
-  { name: "blog", path: "/blogs" },
-  { name: "contact", path: "/contact" },
+  { name: "home", path: "/", scrollY: 0 },
+  { name: "projects", path: "/projects", scrollY: 1000 },
+  { name: "blog", path: "/blog", scrollY: 575 },
+  { name: "contact", path: "/contact", scrollY: 1500 },
 ];
 
-const Header = () => {
+const HEADER_BACKGROUND_SCROLLY = 150;
+const BLOG_ACTIVE_SCROLLY = 575;
+
+const Header = ({ locationProps, siteTitle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showHeaderBackground, setShowHeaderBackground] = useState(false);
 
@@ -34,12 +38,13 @@ const Header = () => {
     //   console.log(window.scrollY);
     // }
     function scrollHandler(e) {
-      console.log(window.scrollY > 100);
-      if (window.scrollY > 100) {
+      //   console.log("window.scrollY:", window.scrollY);
+      //   console.log(window.scrollY > HEADER_BACKGROUND_SCROLLY);
+      if (window.scrollY > HEADER_BACKGROUND_SCROLLY) {
         setShowHeaderBackground(true);
-        console.log("show header background");
+        // console.log("show header background");
       } else {
-        console.log("don't show header background");
+        // console.log("don't show header background");
         setShowHeaderBackground(false);
       }
     }
@@ -105,7 +110,7 @@ const Header = () => {
           </ul>
         </div>
         {/* )} */}
-        <Navbar />
+        <Location>{(locationProps) => <Navbar {...locationProps} />}</Location>
         <Link to="/contact" className="messageMe">
           <svg
             className="messageMe__icon"

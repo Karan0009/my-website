@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import Header from "./header/header";
@@ -8,6 +8,13 @@ import "../styles/global.scss";
 import "./layout.css";
 import Footer from "./footer/footer";
 import Background from "./background/background";
+
+const menuItems = [
+  { name: "home", path: "/", scrollY: 0 },
+  { name: "projects", path: "/projects", scrollY: 1000 },
+  { name: "blog", path: "/blog", scrollY: 575 },
+  { name: "contact", path: "/contact", scrollY: 1500 },
+];
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -32,6 +39,7 @@ const Layout = ({ children }) => {
       <Background />
 
       {/* padding: `0 1.0875rem 1.45rem`, */}
+
       <div
         style={{
           margin: `0 auto`,

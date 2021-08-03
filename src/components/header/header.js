@@ -6,12 +6,26 @@ import Navbar from "../navbar/navbar";
 import { Location } from "@reach/router";
 
 import "./header.scss";
-
 const menuItems = [
-  { name: "home", path: "/", scrollY: 0 },
-  { name: "projects", path: "/projects", scrollY: 1000 },
-  { name: "blog", path: "/blog", scrollY: 575 },
-  { name: "contact", path: "/contact", scrollY: 1500 },
+  {
+    name: "about",
+    path: "#aboutMe__section",
+    id: "aboutMe",
+    sectionId: "aboutMe__section",
+  },
+  {
+    name: "blog",
+    path: "#blog__section",
+    id: "blog",
+    sectionId: "blog__section",
+  },
+  {
+    name: "projects",
+    path: "#projects__section",
+    id: "projects",
+    sectionId: "projects__section",
+  },
+  // { name: "contact", path: "/contact" },
 ];
 
 const HEADER_BACKGROUND_SCROLLY = 150;
@@ -23,9 +37,9 @@ const Header = ({ locationProps, siteTitle }) => {
 
   useEffect(() => {
     let ticking = false;
-    window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", scrollHandlerForHeaderBackgroundBlur);
     // const lastScrollTopVal = window.pageYOffset;
-    // window.addEventListener("scroll", scrollHandler);
+    // window.addEventListener("scroll", scrollHandlerForHeaderBackgroundBlur);
 
     // (e) => {
     // if (!ticking) {
@@ -37,7 +51,7 @@ const Header = ({ locationProps, siteTitle }) => {
     // }
     //   console.log(window.scrollY);
     // }
-    function scrollHandler(e) {
+    function scrollHandlerForHeaderBackgroundBlur(e) {
       //   console.log("window.scrollY:", window.scrollY);
       //   console.log(window.scrollY > HEADER_BACKGROUND_SCROLLY);
       if (window.scrollY > HEADER_BACKGROUND_SCROLLY) {
@@ -50,7 +64,10 @@ const Header = ({ locationProps, siteTitle }) => {
     }
 
     return () => {
-      window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener(
+        "scroll",
+        scrollHandlerForHeaderBackgroundBlur
+      );
     };
   }, []);
 
@@ -86,13 +103,13 @@ const Header = ({ locationProps, siteTitle }) => {
                 transform: isMenuOpen ? "translateX(0)" : "translateX(100vw)",
               }}
             >
-              <Link
-                to={item.path}
-                activeClassName="mobile-active-item"
+              <a
+                href={item.path}
+                // activeClassName="mobile-active-item"
                 className="mobile-nav-item-link"
               >
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

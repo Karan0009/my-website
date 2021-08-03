@@ -8,7 +8,7 @@ const SectionLayout = (props) => {
   const { children, hasPostCards, id } = props;
   return (
     <section
-      className="sectionContainer"
+      className="sectionContainer pageMainSection"
       id={id || `section__${Math.floor(Math.random() * 1000)}`}
     >
       <h3 className="sectionContainer__title">

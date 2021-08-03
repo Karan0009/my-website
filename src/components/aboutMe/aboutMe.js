@@ -5,7 +5,10 @@ import "./aboutMe.scss";
 
 const AboutMeSection = () => {
   return (
-    <section className="container aboutMeSection" id="aboutMe__section">
+    <section
+      className="container aboutMeSection pageMainSection"
+      id="aboutMe__section"
+    >
       <main className="container__inner aboutMe__container">
         <h1 className="aboutMe__title">
           i am <span style={{ fontWeight: "bold" }}>KARAN</span>
